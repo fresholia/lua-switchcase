@@ -3,7 +3,7 @@
 Example here:
 ```lua
 switch {
-    int,
+    "banana",
     case = {
         ["banana"] = function()
             print("it's banana")
@@ -17,4 +17,11 @@ switch {
         print("it's else")
     end;
 }
+```
+
+
+The console prints:
+```
+it's banana
+
 ```
