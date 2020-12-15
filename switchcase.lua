@@ -3,23 +3,13 @@ function switch(array)
     s.integer = array[1];
     s.cases = array.case;
 
-    array.case[s.integer]()
-    collectgarbage("collect")
+    if array.case[s.integer] then
+        array.case[s.integer]();
+    else
+        array.default();
+    end
+    collectgarbage("collect");
 	return s
 end
-
-local int = "banana"
-switch {
-    int,
-    case = {
-        ["banana"] = function()
-            print("it's banana")
-        end;
-
-        ["apple"] = function()
-            print("it's apple")
-        end;
-    }
-}
 
 return switch
